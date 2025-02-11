@@ -4,7 +4,7 @@ function App() {
   return (
     <>
       <h1>Tick Task</h1>
-      <h3>This app helps users add, manage, and track tasks efficiently.</h3>
+      <h3>Effortlessly add, manage, and track tasks your productivity</h3>
 
       <form className="new-item-form">
         <div className="form-row">
