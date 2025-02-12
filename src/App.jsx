@@ -3,9 +3,17 @@ import "./style.css";
 
 function App() {
   const [newItem, setNewItem] = useState("");
+  const [Todos, setTodos] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
+
+    setTodos((currentTodos) => {
+      return [
+        ...currentTodos,
+        { id: crypto.randomUUID(), title: newItem, completed: false },
+      ];
+    });
   }
 
   return (
@@ -28,27 +36,17 @@ function App() {
       </form>
       <h1 className="header">Todos:</h1>
       <ul className="list">
-        <li>
-          <label>
-            <input type="checkbox" />
-            Item 1
-          </label>
-          <button className="btn btn-primary">Delete</button>
-        </li>
-        <li>
-          <label>
-            <input type="checkbox" />
-            Item 2
-          </label>
-          <button className="btn btn-primary">Delete</button>
-        </li>
-        <li>
-          <label>
-            <input type="checkbox" />
-            Item 3
-          </label>
-          <button className="btn btn-primary">Delete</button>
-        </li>
+        {Todos.map((todo) => {
+          return (
+            <li>
+              <label>
+                <input type="checkbox" />
+                Item 1
+              </label>
+              <button className="btn btn-primary">Delete</button>
+            </li>
+          );
+        })}
       </ul>
     </>
   );
