@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 
 function TodoApp() {
@@ -15,15 +14,25 @@ function TodoApp() {
   const removeTodo = (index) => {
     setTodos(todos.filter((_, i) => i !== index));
   };
+
   return (
-    <>
-      <h2>Todo List</h2>
+    <div>
+      <h2>Tick Task</h2>
       <input
         type="text"
         value={input}
         onChange={(e) => setInput(e.target.value)}
+        placeholder="Enter a task"
       />
-    </>
+      <button onClick={addTodo}>Add</button>
+      <ul>
+        {todos.map((todo, index) => (
+          <li key={index}>
+            {todo} <button onClick={() => removeTodo(index)}>❌</button>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
