@@ -29,7 +29,7 @@ function TodoApp() {
         type="text"
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        placeholder="Enter a task"
+        placeholder="Enter a task..."
       />
       <button onClick={addTodo}>Add</button>
       <ul>
