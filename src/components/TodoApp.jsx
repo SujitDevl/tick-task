@@ -35,7 +35,7 @@ function TodoApp() {
       <ul>
         {todos.map((todo, index) => (
           <li key={index}>
-            {todo} <button onClick={() => removeTodo(index)}>❌</button>
+            {todo} <button onClick={() => removeTodo(index)}>  ❌ </button>
           </li>
         ))}
       </ul>
