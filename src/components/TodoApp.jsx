@@ -31,7 +31,7 @@ function TodoApp() {
         onChange={(e) => setInput(e.target.value)}
         placeholder="Enter a task..."
       />
-      <button onClick={addTodo}>Add</button>
+      <button onClick={addTodo}> Add </button>
       <ul>
         {todos.map((todo, index) => (
           <li key={index}>
