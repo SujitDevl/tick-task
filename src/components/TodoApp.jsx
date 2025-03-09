@@ -29,13 +29,13 @@ function TodoApp() {
         type="text"
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        placeholder="Enter a task..." 
+        placeholder="Enter a task..."
       />
       <button onClick={addTodo}> Add </button>
       <ul>
         {todos.map((todo, index) => (
           <li key={index}>
-            {todo} <button  onClick={() => removeTodo(index)}>  ❌ </button>
+            {todo} <button onClick={() => removeTodo(index)}> ❌ </button>
           </li>
         ))}
       </ul>
@@ -44,5 +44,3 @@ function TodoApp() {
 }
 
 export default TodoApp;
-
-
