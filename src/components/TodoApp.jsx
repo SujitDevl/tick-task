@@ -24,7 +24,7 @@ function TodoApp() {
 
   return (
     <div>
-      <h2>To do App</h2>
+      <h2>Tick Task</h2>
       <input
         type="text"
         value={input}
